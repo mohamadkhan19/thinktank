@@ -27,7 +27,7 @@ angular.module('sbAdminApp')
         //var data = APP_CLOUD.getHeaders(true);
         $http({
           method: 'GET',
-          url: 'http://localhost:4300/customers'
+          url: 'https://thinktank-backend.herokuapp.com/customers'
         }).then(function(resp) {
           console.log("This is response: "+resp.data.obj[1].sumofproducts);
                 $scope.totalPrice = resp.data;
@@ -98,4 +98,6 @@ angular.module('sbAdminApp')
     	    'Pie' : 'PolarArea';
 		}
     };
+
+    
 }]);
